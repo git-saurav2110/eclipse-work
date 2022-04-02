@@ -1,0 +1,30 @@
+// MEthod overriding
+package Practice;
+class Test{
+	Object sho()
+	{
+		System.out.println("Show 1 method");
+		return null;
+	}
+}
+class Show2 extends Test
+{
+	public String sho()
+	{
+		System.out.println("Show 2 method");
+		return null;
+	}
+	
+}
+
+public class Polymorphism2 {
+
+	public static void main(String[] args) {
+		Show2 s=new Show2();
+		s.sho();
+		Test t=new Test();
+		t.sho();
+
+	}
+
+}

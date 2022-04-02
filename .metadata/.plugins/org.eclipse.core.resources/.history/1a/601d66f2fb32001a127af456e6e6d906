@@ -1,0 +1,21 @@
+package primeNumber;
+import java.util.Scanner;
+
+public class Prime {
+
+	public static void main(String[] args) {
+		// You are given an integer N. You need to print the series of all prime numbers till N.
+      Scanner sc=new Scanner(System.in);
+      int a,i,j;
+      a=sc.nextInt();
+      i=1;j=2;
+      while(i<=a)
+      {
+    	  for(i;i<a;i++)
+    	  {
+    		  
+    	  }
+      }
+	}
+
+}

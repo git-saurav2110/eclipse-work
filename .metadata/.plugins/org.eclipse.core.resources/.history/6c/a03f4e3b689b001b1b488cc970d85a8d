@@ -1,0 +1,50 @@
+package adjacencyList;
+
+import java.util.ArrayList;
+
+public class DFSrev {
+	static ArrayList<ArrayList<Integer>> arr=new ArrayList<ArrayList<Integer>>();
+	int vertices;
+	DFSrev(int vertices){
+		this.vertices=vertices;
+		for(int i=0;i<vertices;i++) {
+			arr.add( new ArrayList<Integer>());
+		}
+	}
+	
+	void addEdge(int source,int desti) {
+		if(! arr.get(source).contains(desti)) {
+			arr.get(source).add(desti);
+			arr.get(desti).add(source);
+			}
+	}
+	
+	void print() {
+		for(int i=0;i<arr.size();i++) {
+			System.out.print(i + "--->");
+			for(int j: arr.get(i)) {
+				System.out.print(j+" ");
+			}
+		}
+	}
+	
+	
+	public static void main(String [] args) {
+		DFSrev g=new DFSrev(7);
+		
+		g.addEdge(0, 1);
+		g.addEdge(0, 3);
+		g.addEdge(3, 1);
+		g.addEdge(2, 1);
+		g.addEdge(5, 1);
+		g.addEdge(6, 1);
+		g.addEdge(3, 2);
+		g.addEdge(5, 2);
+		g.addEdge(3, 4);
+		g.addEdge(2, 4);
+		g.addEdge(6, 4);
+		
+		g.print();
+	}
+
+}
